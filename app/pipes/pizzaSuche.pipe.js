@@ -9,27 +9,36 @@ System.register(['angular2/core'], function(exports_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var UeberComponent;
+    var PizzaSuchePipe;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            UeberComponent = (function () {
-                function UeberComponent() {
+            PizzaSuchePipe = (function () {
+                function PizzaSuchePipe() {
                 }
-                UeberComponent = __decorate([
-                    core_1.Component({
-                        selector: 'ueber',
-                        template: "\n    <div>Wir sind Ihr Lieferdienst, wenn es um PIZZA* geht! Daf\u00FCr stehen wir mit unserem Namen.<br><br><small>*ohne Ananas!</small></div>\n    "
-                    }), 
+                PizzaSuchePipe.prototype.transform = function (pizzen, args) {
+                    var suchString = args[0], treffer = [];
+                    if (!suchString) {
+                        return pizzen;
+                    }
+                    pizzen.forEach(function (pizza) {
+                        if (pizza.name.match(new RegExp(suchString, 'i'))) {
+                            treffer.push(pizza);
+                        }
+                    });
+                    return treffer;
+                };
+                PizzaSuchePipe = __decorate([
+                    core_1.Pipe({ name: 'pizzaSuche' }), 
                     __metadata('design:paramtypes', [])
-                ], UeberComponent);
-                return UeberComponent;
+                ], PizzaSuchePipe);
+                return PizzaSuchePipe;
             })();
-            exports_1("UeberComponent", UeberComponent);
+            exports_1("PizzaSuchePipe", PizzaSuchePipe);
         }
     }
 });
-//# sourceMappingURL=ueber.component.js.map
+//# sourceMappingURL=pizzaSuche.pipe.js.map

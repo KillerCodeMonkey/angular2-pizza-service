@@ -4,6 +4,8 @@ import {NgForm} from 'angular2/common';
 import {WarenkorbService} from '../../services/warenkorb.service';
 import {WarenkorbComponent} from '../warenkorb/warenkorb.component.ts';
 
+import {PizzaSuchePipe} from '../../pipes/pizzaSuche.pipe.ts';
+
 interface Pizza {
     id: number,
     name: string,
@@ -13,6 +15,7 @@ interface Pizza {
 @Component({
     selector: 'bestellung',
     directives: [NgForm, WarenkorbComponent],
+    pipes: [PizzaSuchePipe],
     templateUrl: './app/components/bestellung/bestellung.component.html'
 })
 export class BestellungComponent {
@@ -34,7 +37,7 @@ export class BestellungComponent {
 var PIZZEN: Pizza[] = [{
     id: 1,
     name: 'Pizza Vegetaria',
-    preis: 10.99
+    preis: 5.99
 }, {
     id: 2,
     name: 'Pizza Salami',
@@ -42,7 +45,7 @@ var PIZZEN: Pizza[] = [{
 }, {
     id: 3,
     name: 'Pizza Thunfisch',
-    preis: 10.99
+    preis: 7.99
 }, {
     id: 4,
     name: 'Aktueller Flyer',

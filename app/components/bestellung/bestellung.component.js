@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/common', '../../services/warenkorb.service', '../warenkorb/warenkorb.component.ts'], function(exports_1) {
+System.register(['angular2/core', 'angular2/common', '../../services/warenkorb.service', '../warenkorb/warenkorb.component.ts', '../../pipes/pizzaSuche.pipe.ts'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,7 +8,7 @@ System.register(['angular2/core', 'angular2/common', '../../services/warenkorb.s
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, common_1, warenkorb_service_1, warenkorb_component_ts_1;
+    var core_1, common_1, warenkorb_service_1, warenkorb_component_ts_1, pizzaSuche_pipe_ts_1;
     var BestellungComponent, PIZZEN;
     return {
         setters:[
@@ -23,6 +23,9 @@ System.register(['angular2/core', 'angular2/common', '../../services/warenkorb.s
             },
             function (warenkorb_component_ts_1_1) {
                 warenkorb_component_ts_1 = warenkorb_component_ts_1_1;
+            },
+            function (pizzaSuche_pipe_ts_1_1) {
+                pizzaSuche_pipe_ts_1 = pizzaSuche_pipe_ts_1_1;
             }],
         execute: function() {
             BestellungComponent = (function () {
@@ -44,6 +47,7 @@ System.register(['angular2/core', 'angular2/common', '../../services/warenkorb.s
                     core_1.Component({
                         selector: 'bestellung',
                         directives: [common_1.NgForm, warenkorb_component_ts_1.WarenkorbComponent],
+                        pipes: [pizzaSuche_pipe_ts_1.PizzaSuchePipe],
                         templateUrl: './app/components/bestellung/bestellung.component.html'
                     }), 
                     __metadata('design:paramtypes', [warenkorb_service_1.WarenkorbService])
@@ -54,7 +58,7 @@ System.register(['angular2/core', 'angular2/common', '../../services/warenkorb.s
             PIZZEN = [{
                     id: 1,
                     name: 'Pizza Vegetaria',
-                    preis: 10.99
+                    preis: 5.99
                 }, {
                     id: 2,
                     name: 'Pizza Salami',
@@ -62,7 +66,7 @@ System.register(['angular2/core', 'angular2/common', '../../services/warenkorb.s
                 }, {
                     id: 3,
                     name: 'Pizza Thunfisch',
-                    preis: 10.99
+                    preis: 7.99
                 }, {
                     id: 4,
                     name: 'Aktueller Flyer',
