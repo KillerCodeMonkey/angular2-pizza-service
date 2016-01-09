@@ -4,7 +4,7 @@
     <tbody>
         <tr *ngFor="#eintrag of aktuellerWarenkorb">
             <td>{{eintrag.name}}</td>
-            <td>{{eintrag.preis | currency:'USD':true}}</td>
+            <td>{{eintrag.preis ? (eintrag.preis | currency:'USD':true) : 'kostenlos'}}</td>
         </tr>
     </tbody>
 </table>
