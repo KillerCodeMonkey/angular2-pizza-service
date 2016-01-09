@@ -8,7 +8,7 @@
         <tr *ngFor="#pizza of pizzen">
             <td>{{index}}</td>
             <td>{{pizza.name}}</td>
-            <td>{{pizza.preis | currency}}</td>
+            <td>{{pizza.preis | currency:'USD':true}}</td>
             <td>
                 <a class="btn btn-default btn-sm" (click)="zumWarenkorb(pizza)">
                     Hinzufügen
