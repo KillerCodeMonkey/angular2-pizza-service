@@ -22,7 +22,7 @@ System.register(['angular2/core'], function(exports_1) {
                 UeberComponent = __decorate([
                     core_1.Component({
                         selector: 'ueber',
-                        template: "\n    Wir sind dein Lieferdienst, wenn es um PIZZA* geht! <small>*ohne Ananas!</small>\n    "
+                        template: "\n    <div>Wir sind Ihr Lieferdienst, wenn es um PIZZA* geht! Daf\u00FCr stehen wir mit unserem Namen.<small>*ohne Ananas!</small></div>\n    "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], UeberComponent);

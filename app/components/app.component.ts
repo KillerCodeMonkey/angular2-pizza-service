@@ -6,12 +6,12 @@ import {UeberComponent} from './ueber/ueber.component';
 import {NavigationComponent} from './navigation/navigation.component';
 
 @RouteConfig([{
-    path: '/',
+    path: '/bestellen',
     component: BestellungComponent,
     name: 'Bestellung',
     useAsDefault: true
 }, {
-    path: '/about',
+    path: '/ueber',
     component: UeberComponent,
     name: 'Ueber'
 }])

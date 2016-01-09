@@ -39,7 +39,8 @@ System.register(['angular2/core', '../../services/warenkorb.service'], function(
                 WarenkorbComponent = __decorate([
                     core_1.Component({
                         selector: 'warenkorb',
-                        templateUrl: './app/components/warenkorb/warenkorb.component.html'
+                        templateUrl: './app/components/warenkorb/warenkorb.component.html',
+                        styleUrls: ['./app/components/warenkorb/warenkorb.component.css']
                     }), 
                     __metadata('design:paramtypes', [warenkorb_service_1.WarenkorbService])
                 ], WarenkorbComponent);

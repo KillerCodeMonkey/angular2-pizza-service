@@ -3,7 +3,7 @@ import {Component} from 'angular2/core';
 @Component({
     selector: 'ueber',
     template: `
-    Wir sind dein Lieferdienst, wenn es um PIZZA* geht! <small>*ohne Ananas!</small>
+    <div>Wir sind Ihr Lieferdienst, wenn es um PIZZA* geht! Dafür stehen wir mit unserem Namen.<small>*ohne Ananas!</small></div>
     `
 })
 export class UeberComponent {}

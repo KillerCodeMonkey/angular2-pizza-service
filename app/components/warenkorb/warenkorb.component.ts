@@ -4,7 +4,8 @@ import {WarenkorbService} from '../../services/warenkorb.service';
 
 @Component({
     selector: 'warenkorb',
-    templateUrl: './app/components/warenkorb/warenkorb.component.html'
+    templateUrl: './app/components/warenkorb/warenkorb.component.html',
+    styleUrls: ['./app/components/warenkorb/warenkorb.component.css']
 })
 export class WarenkorbComponent {
     public aktuellerWarenkorb;

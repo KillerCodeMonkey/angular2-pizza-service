@@ -33,12 +33,12 @@ System.register(['angular2/core', 'angular2/router', './bestellung/bestellung.co
                 }
                 AppComponent = __decorate([
                     router_1.RouteConfig([{
-                            path: '/',
+                            path: '/bestellen',
                             component: bestellung_component_1.BestellungComponent,
                             name: 'Bestellung',
                             useAsDefault: true
                         }, {
-                            path: '/about',
+                            path: '/ueber',
                             component: ueber_component_1.UeberComponent,
                             name: 'Ueber'
                         }]),
