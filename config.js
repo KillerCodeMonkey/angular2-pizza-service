@@ -7,12 +7,12 @@ System.config({
     },
     //map tells the System loader where to look for things
     map: {
-        app: './src'
+        app: './app'
     },
     //packages defines our app package
     packages: {
         app: {
-            main: 'app.ts',
+            main: 'boot.ts',
             defaultExtension: 'ts'
         }
     }
