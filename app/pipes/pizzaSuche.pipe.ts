@@ -1,8 +1,9 @@
 import {Pipe, PipeTransform} from 'angular2/core';
+import {Pizza} from '../interfaces/pizza.interface';
 
 @Pipe({name: 'pizzaSuche'})
 export class PizzaSuchePipe implements PipeTransform {
-    transform(pizzen:any, args:string[]) : any {
+    transform(pizzen:Pizza[], args:string[]) : any {
         var suchString = args[0],
             treffer = [];
 

@@ -5,12 +5,7 @@ import {WarenkorbService} from '../../services/warenkorb.service';
 import {WarenkorbComponent} from '../warenkorb/warenkorb.component.ts';
 
 import {PizzaSuchePipe} from '../../pipes/pizzaSuche.pipe.ts';
-
-interface Pizza {
-    id: number,
-    name: string,
-    preis: number
-}
+import {Pizza} from '../../interfaces/pizza.interface.ts';
 
 @Component({
     selector: 'bestellung',
