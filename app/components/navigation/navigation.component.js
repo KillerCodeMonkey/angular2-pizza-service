@@ -31,9 +31,10 @@ System.register(['angular2/core', 'angular2/router', '../../services/warenkorb.s
                     var _this = this;
                     this._warenkorbService.update.subscribe(function (update) {
                         if (update) {
+                            var self = _this;
                             _this.neuerWarenkorb = true;
                             setTimeout(function () {
-                                this.neuerWarenkorb = false;
+                                self.neuerWarenkorb = false;
                             }, 500);
                         }
                     });
