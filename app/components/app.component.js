@@ -45,6 +45,7 @@ System.register(['angular2/core', 'angular2/router', './bestellung/bestellung.co
                     core_1.Component({
                         selector: 'app',
                         directives: [router_1.ROUTER_DIRECTIVES, navigation_component_1.NavigationComponent],
+                        providers: [router_1.ROUTER_PROVIDERS],
                         template: "\n    <navigation></navigation>\n    <router-outlet></router-outlet>\n    "
                     }), 
                     __metadata('design:paramtypes', [])
