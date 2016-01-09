@@ -1,0 +1,14 @@
+<b>Mein Warenkorb</b>
+
+<table class="table" *ngIf="aktuellerWarenkorb.length">
+    <tbody>
+        <tr *ngFor="#eintrag of aktuellerWarenkorb">
+            <td>{{eintrag.name}}</td>
+            <td>{{eintrag.preis | currency}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<p [style.visibility]="aktuellerWarenkorb.length ? 'hidden' : 'inherit'" class="alert alert-info">
+    Ihr Warenkorb ist noch leer.
+</p>

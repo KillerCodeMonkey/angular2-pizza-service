@@ -1,19 +1,27 @@
-import {Input, Component} from 'angular2/core';
-import {FORM_DIRECTIVES} from 'angular2/common';
+import {Component} from 'angular2/core';
+import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
+
+import {BestellungComponent} from './bestellung/bestellung.component';
+import {UeberComponent} from './ueber/ueber.component';
+import {NavigationComponent} from './navigation/navigation.component';
+
+@RouteConfig([{
+    path: '/',
+    component: BestellungComponent,
+    name: 'Bestellung',
+    useAsDefault: true
+}, {
+    path: '/about',
+    component: UeberComponent,
+    name: 'Ueber'
+}])
 
 @Component({
-    selector: 'my-app',
+    selector: 'app',
+    directives: [ROUTER_DIRECTIVES, NavigationComponent],
     template: `
-    <h1>
-        Heyho {{name}}
-    </h1>
-    <input [(ngModel)]="name">
+    <navigation></navigation>
+    <router-outlet></router-outlet>
     `
 })
-export class AppComponent {
-    @Input() name : string;
-
-    constructor() {
-        this.name = 'Alice';
-    }
-}
+export class AppComponent {}

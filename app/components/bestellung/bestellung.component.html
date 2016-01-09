@@ -1,0 +1,19 @@
+<form #suchFormular="ngForm">
+    <label for="suche">Pizza-Suche</label>
+    <br>
+    <input type="text" name="suche" [(ngModel)]="suche" placeholder="Pizza-Name">
+</form>
+<table class="table">
+    <tbody>
+        <tr *ngFor="#pizza of pizzen">
+            <td>{{index}}</td>
+            <td>{{pizza.name}}</td>
+            <td>{{pizza.preis | currency}}</td>
+            <td>
+                <a class="btn btn-default btn-sm" (click)="zumWarenkorb(pizza)">
+                    Hinzufügen
+                </a>
+        </tr>
+    </tbody>
+</table>
+<warenkorb></warenkorb>
