@@ -24,11 +24,12 @@ System.register(['angular2/http', 'angular2/core', 'rxjs/add/operator/map'], fun
                 function PizzaService(_http) {
                     this._http = _http;
                 }
-                PizzaService.prototype.ladeAngebot = function () {
-                    return this._http.get('assets/pizzen.json')
+                PizzaService.prototype.getPizza = function () {
+                    return this._http.get('assets/pizza.json')
                         .map(function (res) { return res.json(); });
                 };
                 PizzaService = __decorate([
+                    // add map function to observable
                     core_1.Injectable(), 
                     __metadata('design:paramtypes', [http_1.Http])
                 ], PizzaService);

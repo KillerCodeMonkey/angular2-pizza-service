@@ -9,36 +9,36 @@ System.register(['angular2/core'], function(exports_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var PizzaSuchePipe;
+    var PizzaSearchPipe;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            PizzaSuchePipe = (function () {
-                function PizzaSuchePipe() {
+            PizzaSearchPipe = (function () {
+                function PizzaSearchPipe() {
                 }
-                PizzaSuchePipe.prototype.transform = function (pizzen, args) {
-                    var suchString = args[0], treffer = [];
-                    if (!suchString) {
-                        return pizzen;
+                PizzaSearchPipe.prototype.transform = function (pizzas, args) {
+                    var searchString = args[0], matches = [];
+                    if (!searchString) {
+                        return pizzas;
                     }
-                    pizzen.forEach(function (pizza) {
-                        if (pizza.name.match(new RegExp(suchString, 'i'))) {
-                            treffer.push(pizza);
+                    pizzas.forEach(function (pizza) {
+                        if (pizza.name.match(new RegExp(searchString, 'i'))) {
+                            matches.push(pizza);
                         }
                     });
-                    return treffer;
+                    return matches;
                 };
-                PizzaSuchePipe = __decorate([
-                    core_1.Pipe({ name: 'pizzaSuche' }), 
+                PizzaSearchPipe = __decorate([
+                    core_1.Pipe({ name: 'pizzaSearch' }), 
                     __metadata('design:paramtypes', [])
-                ], PizzaSuchePipe);
-                return PizzaSuchePipe;
+                ], PizzaSearchPipe);
+                return PizzaSearchPipe;
             })();
-            exports_1("PizzaSuchePipe", PizzaSuchePipe);
+            exports_1("PizzaSearchPipe", PizzaSearchPipe);
         }
     }
 });
-//# sourceMappingURL=pizzaSuche.pipe.js.map
+//# sourceMappingURL=pizzaSearch.pipe.js.map

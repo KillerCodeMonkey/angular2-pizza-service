@@ -9,27 +9,27 @@ System.register(['angular2/core'], function(exports_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var UeberComponent;
+    var AboutComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            UeberComponent = (function () {
-                function UeberComponent() {
+            AboutComponent = (function () {
+                function AboutComponent() {
                 }
-                UeberComponent = __decorate([
+                AboutComponent = __decorate([
                     core_1.Component({
-                        selector: 'ueber',
+                        selector: 'about',
                         template: "\n    <div>Wir sind Ihr Lieferdienst, wenn es um PIZZA* geht! Daf\u00FCr stehen wir mit unserem Namen.<br><br><small>*ohne Ananas!</small></div>\n    "
                     }), 
                     __metadata('design:paramtypes', [])
-                ], UeberComponent);
-                return UeberComponent;
+                ], AboutComponent);
+                return AboutComponent;
             })();
-            exports_1("UeberComponent", UeberComponent);
+            exports_1("AboutComponent", AboutComponent);
         }
     }
 });
-//# sourceMappingURL=ueber.component.js.map
+//# sourceMappingURL=about.component.js.map

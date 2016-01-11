@@ -9,37 +9,37 @@ System.register(['angular2/core'], function(exports_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var WarenkorbService;
+    var CartService;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            WarenkorbService = (function () {
-                function WarenkorbService() {
+            CartService = (function () {
+                function CartService() {
                     this.update = new core_1.EventEmitter();
-                    this.warenkorb = [];
+                    this.cart = [];
                 }
-                WarenkorbService.prototype.meinWarenkorb = function () {
-                    return this.warenkorb;
+                CartService.prototype.getCart = function () {
+                    return this.cart;
                 };
-                WarenkorbService.prototype.addWarenkorb = function (eintrag) {
-                    this.warenkorb.push(eintrag);
+                CartService.prototype.addCartItem = function (item) {
+                    this.cart.push(item);
                     this.update.next(true);
                 };
                 __decorate([
                     core_1.Output(), 
                     __metadata('design:type', core_1.EventEmitter)
-                ], WarenkorbService.prototype, "update", void 0);
-                WarenkorbService = __decorate([
+                ], CartService.prototype, "update", void 0);
+                CartService = __decorate([
                     core_1.Injectable(), 
                     __metadata('design:paramtypes', [])
-                ], WarenkorbService);
-                return WarenkorbService;
+                ], CartService);
+                return CartService;
             })();
-            exports_1("WarenkorbService", WarenkorbService);
+            exports_1("CartService", CartService);
         }
     }
 });
-//# sourceMappingURL=warenkorb.service.js.map
+//# sourceMappingURL=cart.service.js.map
