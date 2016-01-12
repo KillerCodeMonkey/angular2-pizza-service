@@ -39,8 +39,8 @@ System.register(['angular2/core', 'angular2/common', 'angular2/router', '../../s
                     this._cartService = _cartService;
                     this._pizzaService = _pizzaService;
                 }
-                OrderComponent.prototype.routerOnActivate = function () {
-                    console.log(arguments);
+                OrderComponent.prototype.routerOnActivate = function (nextInstruction, prevInstruction) {
+                    console.log(nextInstruction, prevInstruction);
                 };
                 OrderComponent.prototype.ngOnInit = function () {
                     var _this = this;
