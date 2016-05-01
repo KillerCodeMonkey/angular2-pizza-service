@@ -1,4 +1,6 @@
-System.register(['angular2/core', 'angular2/router', '../../services/cart.service'], function(exports_1) {
+System.register(['angular2/core', 'angular2/router', '../../services/cart.service'], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -31,10 +33,9 @@ System.register(['angular2/core', 'angular2/router', '../../services/cart.servic
                     var _this = this;
                     this._cartService.update.subscribe(function (update) {
                         if (update) {
-                            var self = _this;
                             _this.cartUpdated = true;
                             setTimeout(function () {
-                                self.cartUpdated = false;
+                                _this.cartUpdated = false;
                             }, 500);
                         }
                     });
@@ -48,7 +49,7 @@ System.register(['angular2/core', 'angular2/router', '../../services/cart.servic
                     __metadata('design:paramtypes', [cart_service_1.CartService])
                 ], NavigationComponent);
                 return NavigationComponent;
-            })();
+            }());
             exports_1("NavigationComponent", NavigationComponent);
         }
     }
