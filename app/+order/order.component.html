@@ -1,7 +1,7 @@
 <form #suchFormular="ngForm">
     <label for="suche">Pizza-Suche</label>
     <br>
-    <input type="text" name="search" [(ngModel)]="search" placeholder="Pizza-Name">
+    <input type="text" ngControl="search" [(ngModel)]="search" placeholder="Pizza-Name">
 </form>
 <table class="table">
     <thead>
