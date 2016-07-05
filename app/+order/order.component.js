@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var common_1 = require('@angular/common');
 var cart_component_1 = require('../cart/cart.component');
 var index_1 = require('../cart/index');
 var index_2 = require('../+pizza/index');
@@ -39,7 +38,7 @@ var OrderComponent = (function () {
     OrderComponent = __decorate([
         core_1.Component({
             selector: 'order',
-            directives: [common_1.NgForm, cart_component_1.CartComponent],
+            directives: [cart_component_1.CartComponent],
             pipes: [index_2.PizzaSearchPipe],
             providers: [index_2.PizzaService],
             templateUrl: './app/+order/order.component.html'
